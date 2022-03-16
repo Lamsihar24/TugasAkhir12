@@ -10,3 +10,6 @@ Topik untuk Tugas Akhir yang diangkat yaitu Rancang Bangun Aplikasi E-Marketplac
 `PHP min version 8.0.15`
 
 `install composer`
+
+# Update Composer
+`composer update --verbose --prefer-dist`
