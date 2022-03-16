@@ -4,3 +4,8 @@ Topik untuk Tugas Akhir yang diangkat yaitu Rancang Bangun Aplikasi E-Marketplac
 
 # How to install
 `cp env.sample to .env`
+
+`XAMPP min version 8.0.15`
+`PHP min version 8.0.15`
+
+`composer`
