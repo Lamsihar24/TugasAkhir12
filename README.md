@@ -11,9 +11,9 @@ Topik untuk Tugas Akhir yang diangkat yaitu Rancang Bangun Aplikasi E-Marketplac
 
 `install composer`
 
-RUN
+# How to RUN
 - `php artisan serve`
-- open the browser
+- open the browser via URL
 
 # Update Composer
 `composer update --verbose --prefer-dist`
