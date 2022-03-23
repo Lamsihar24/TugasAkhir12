@@ -1,0 +1,23 @@
+.menu-kanan .nav-link{
+    margin: 0px 10px;
+}
+.nav-item a{
+    font-weight: 500;
+}
+.menu-kiri .nav-link{
+    font-size: 21px;
+}
+
+.search{
+    min-height: 700px;
+}
+
+.search-result{
+    height: 200px;
+    background-color: bisque;
+}
+
+.search-filter{
+    height: 200px;
+    background-color: aqua;
+}
