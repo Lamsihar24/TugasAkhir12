@@ -5,7 +5,7 @@
     font-weight: 500;
 }
 .menu-kiri .nav-link{
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .search{
@@ -19,5 +19,12 @@
 
 .search-filter{
     height: 200px;
-    background-color: aqua;
+}
+
+.search-filter .devider{
+    padding: 20px 50px;
+    box-shadow: 0px 1px 0px rgba(158, 158, 158, 0.25);
+}
+.search-filter .judul{
+    border-color: #FFFFFF;
 }
