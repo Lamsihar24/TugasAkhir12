@@ -1,0 +1,30 @@
+.menu-kanan .nav-link{
+    margin: 0px 10px;
+}
+.nav-item a{
+    font-weight: 500;
+}
+.menu-kiri .nav-link{
+    font-size: 18px;
+}
+
+.search{
+    min-height: 700px;
+}
+
+.search-result{
+    height: 200px;
+    background-color: bisque;
+}
+
+.search-filter{
+    height: 200px;
+}
+
+.search-filter .devider{
+    padding: 20px 50px;
+    box-shadow: 0px 1px 0px rgba(158, 158, 158, 0.25);
+}
+.search-filter .judul{
+    border-color: #FFFFFF;
+}
