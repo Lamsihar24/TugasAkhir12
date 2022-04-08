@@ -1,62 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>HKBP Store</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/elegant-icons.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/nice-select.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/jquery-ui.min.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/slicknav.min.css'); }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}" type="text/css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-           <a class="navbar-brand" href="#">
-           <img src="img/logo.png" height="40px" width="100px" alt="">
-           </a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-           </button>
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-kiri">
-                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pasar</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Workshop</a>
-                 </li>
-              </ul>
-              <form class="d-flex">
-                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-kanan">
-                    <li class="nav-item">
-                       <a class="nav-link" aria-current="page" href="#"><img src="img/icon/chart.png" alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#"><img src="img/icon/notification.png" alt=""></a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"><img src="img/icon/profile.png" alt=""></a>
-                     </li>
-                 </ul>
-              </form>
-           </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a>
         </div>
-    </nav>
+        {{-- <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div> --}}
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/product">Belanja</a></li>
+                {{-- <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Blog</a></li> --}}
+                <li><a href="{{ route('contact') }}">Kontak</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        {{-- <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> @colorlib.com</li>
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div> --}}
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-facebook"></i> @hkbpstore</li>
+                                <li><i class="fa fa-instagram"></i> @hkbpstoreindo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#">Notifikasi</a>
+                                <a href="#">Bantuan</a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="/">Beranda</a></li>
+                            <li><a href="/product">Belanja</a></li>
+                            {{-- <li><a href="#">Pages</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li> --}}
+                            <li><a href="{{ route('contact') }}">Kontak</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    {{-- <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                    </div> --}}
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
     @yield('content')
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2022 Copyright:
-          <a class="text-dark" href="#">HKBP Tarbarita Project</a>
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Alamat: Laguboti, Toba</li>
+                            <li>Phone: +62 822-1323-9041</li>
+                            <li>Email: hkbpstore21@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Link</h6>
+                        <ul>
+                            <li><a href="#">Tentang kami</a></li>
+                            <li><a href="#">Komunitas HKBP</a></li>
+                            <li><a href="#">Registrasi Member</a></li>
+                            <li><a href="#">Informasi Pengiriman</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Tim kami</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Bantuan</a></li>
+                            <li><a href="#">Layanan</a></li>
+                            <li><a href="#">Kontak</a></li>
+                            <li><a href="#">Testimoni</a></li>
+                            <li><a href="#">Galery</a></li>
+                            <li><a href="#">Tentang HKBP</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Ikuti kami</h6>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kelompok 12 TA 2022
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Copyright -->
-      </footer>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{{ URL::asset('js/jquery-3.3.1.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/bootstrap.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/jquery.nice-select.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/jquery-ui.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/jquery.slicknav.js'); }}"></script>
+    <script src="{{ URL::asset('js/mixitup.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/owl.carousel.min.js'); }}"></script>
+    <script src="{{ URL::asset('js/main.js'); }}"></script>
+
+
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>
+
