@@ -18,5 +18,12 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
+    public function loginPenjual(){
+        return view('auth.login_penjual');
+    }
+
+    public function RegisterPenjual(){
+        return view('auth.registrasi_penjual');
+    }
 
 }

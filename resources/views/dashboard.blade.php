@@ -85,8 +85,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">Minuman</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/kebaya.png">
+                            <h5><a href="#">Pakaian</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -111,133 +111,481 @@
                     <div class="featured__controls">
                         <ul>
                             <li class="active" data-filter="*">Semua</li>
-                            <li data-filter=".oranges">Bahan Pokok</li>
-                            <li data-filter=".fresh-meat">Pakaian</li>
-                            <li data-filter=".vegetables">Buah-buahan</li>
-                            <li data-filter=".fastfood">Makanan</li>
+                            <li data-filter=".sembako">Bahan Pokok</li>
+                            <li data-filter=".pakaian">Pakaian</li>
+                            <li data-filter=".buah-buahan">Buah-buahan</li>
+                            <li data-filter=".lain-lain">Lain-lain</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row featured__filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/product-13.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Daging Segar</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Ikan Teri</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp25.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges pakaian">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/batik.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Pisang</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Batik Wanita</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(120)</p>
+                            </div>
+                            <h5>Rp280.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges bahan-pokok">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/rinso.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Jambu</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Rinso</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(20)</p>
+                            </div>
+                            <h5>Rp5.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/sabub-cair.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Semangka</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Sabun Cair</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(93)</p>
+                            </div>
+                            <h5>Rp18.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges pakaian">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/rok.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Anggur</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Rok</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(33)</p>
+                            </div>
+                            <h5>Rp80.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/sunlight.jpeg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Burger</a></h6>
-                            <h5>Rp20.000</h5>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Sunlight</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp10.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges lain-lain">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/tisu-basah.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Mangga</a></h6>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Tisu basah</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
                             <h5>Rp20.000</h5>
                         </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/telon.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Apel</a></h6>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Minyak Telon</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
                             <h5>Rp20.000</h5>
                         </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/switsal.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Switsal</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/tepung.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/wpc.jpeg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/sikat-gigi.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/sun-cream.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/kebaya.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/garam.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/kara.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/mama-lemon.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/product/jeans.png">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                        <div class="featured__item__text text-left">
+                            <h6>Daging Segar</h6>
+                            <div>
+                                <p style="margin: 0px">
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                 &nbsp;(220)</p>
+                            </div>
+                            <h5>Rp20.000</h5>
+                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

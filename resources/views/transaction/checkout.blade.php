@@ -68,31 +68,12 @@
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="checkout__input">
-                                        <p>Email<span>*</span></p>
-                                        <input type="text">
-                                    </div>
-                                </div>
                             </div>
                             <div class="checkout__input">
                                 <p>Catatan pemesanan<span>*</span></p>
                                 <input type="text"
                                     placeholder="Catatan tentang pesanan anda, paket jangan di banting">
                             </div>
-                            <div class="checkout__input__checkbox">
-                                <label for="acc">
-                                    Buat akun?
-                                    <input type="checkbox" id="acc">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <p>Buat akun dengan mengisi informasi di bawah</p>
-                            <div class="checkout__input">
-                                <p>Account Password<span>*</span></p>
-                                <input type="password">
-                            </div>
-
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">

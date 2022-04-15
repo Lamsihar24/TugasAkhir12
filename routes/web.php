@@ -27,6 +27,9 @@ Route::get('register',[AuthController::class,'register'])->name('register');
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
 Route::get('contact',[DashboardController::class,'contact'])->name('contact');
 
+Route::get('seller/login',[AuthController::class,'loginPenjual'])->name('login-penjual');
+Route::get('seller/register',[AuthController::class,'registerPenjual'])->name('register-penjual');
+
 Route::get('product',[ProductController::class,'index'])->name('produk');
 Route::get('product/detail',[ProductController::class,'view'])->name('produk.detail');
 Route::get('keranjang',[TransactionController::class,'cart'])->name('keranjang');

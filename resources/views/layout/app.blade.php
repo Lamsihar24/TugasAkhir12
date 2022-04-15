@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Logout</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -117,7 +117,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a>
+                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Logout</a>
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a>
+                            {{-- <a href="./index.html"><img src="{{ URL::asset('img/logo.png') }}" alt=""></a> --}}
                         </div>
                         <ul>
                             <li>Alamat: Laguboti, Toba</li>
