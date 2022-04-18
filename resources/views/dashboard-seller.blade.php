@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.seller')
 
 @section('content')
     <!-- Hero Section Begin -->
@@ -138,23 +138,7 @@
         </div>
     </section>
     <!-- Categories Section End -->
-    <!-- Banner Begin -->
-    <div class="banner mt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="banner__pic">
-                        <img src="img/banner/banner-1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="banner__pic">
-                        <img src="img/banner/banner-2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Featured Section Begin -->
     <section class="featured spad">
         <div class="container">
@@ -174,7 +158,7 @@
             <div class="row featured__filter">
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/product-13.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/product-13.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -200,7 +184,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges pakaian">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/batik.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/batik.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -226,7 +210,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges bahan-pokok">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/rinso.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/rinso.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -252,7 +236,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/sabub-cair.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sabub-cair.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -278,7 +262,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges pakaian">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/rok.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/rok.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -304,7 +288,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges sembako">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/sunlight.jpeg">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sunlight.jpeg') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -330,7 +314,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges lain-lain">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/tisu-basah.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/tisu-basah.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -356,7 +340,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/telon.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/telon.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -408,7 +392,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/tepung.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/tepung.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -434,7 +418,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/wpc.jpeg">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/wpc.jpeg') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -460,7 +444,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/sikat-gigi.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sikat-gigi.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -486,7 +470,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/sun-cream.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sun-cream.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -512,7 +496,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/kebaya.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/kebaya.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -538,7 +522,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/garam.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/garam.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -564,7 +548,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/kara.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{asset('img/product/kara.png')}}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -590,7 +574,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/mama-lemon.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/mama-lemon.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -616,7 +600,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mix oranges fresh-meat">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/product/jeans.png">
+                        <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/jeans.png') }}">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -644,4 +628,23 @@
         </div>
     </section>
     <!-- Featured Section End -->
+
+    <!-- Banner Begin -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
 @endsection

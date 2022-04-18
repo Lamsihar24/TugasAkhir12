@@ -58,45 +58,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="sidebar__item sidebar__item__color--option">
-                            <h4>Colors</h4>
-                            <div class="sidebar__item__color sidebar__item__color--white">
-                                <label for="white">
-                                    White
-                                    <input type="radio" id="white">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--gray">
-                                <label for="gray">
-                                    Gray
-                                    <input type="radio" id="gray">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--red">
-                                <label for="red">
-                                    Red
-                                    <input type="radio" id="red">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--black">
-                                <label for="black">
-                                    Black
-                                    <input type="radio" id="black">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--blue">
-                                <label for="blue">
-                                    Blue
-                                    <input type="radio" id="blue">
-                                </label>
-                            </div>
-                            <div class="sidebar__item__color sidebar__item__color--green">
-                                <label for="green">
-                                    Green
-                                    <input type="radio" id="green">
-                                </label>
-                            </div>
-                        </div> --}}
                         <div class="sidebar__item">
                             <h4>Lokasi</h4>
                             <div class="sidebar__item__size">
@@ -200,7 +161,7 @@
                                     <span class="arrow_carrot-down"></span>
                                 </div>
                                 <input type="text" placeholder="Apa yang sedang anda cari?">
-                                <button type="submit" class="site-btn">CARI</button>
+                                <a href="{{ route('product.search') }}" class="site-btn">CARI</a>
                             </form>
                         </div>
                         <div class="hero__search__phone">
@@ -233,8 +194,8 @@
                                             </ul>
                                         </div>
                                         <div class="product__discount__item__text">
-                                            <span>Bibit Tanaman</span>
-                                            <h5><a href="#">Bibit Mangga Harum Manis</a></h5>
+                                            <span>Jaket Pria/wanita</span>
+                                            <h5><a href="#">Jaket Untuk pria atau wanita</a></h5>
                                             <div class="product__item__price">Rp20.000 <span>Rp25.000</span></div>
                                         </div>
                                     </div>
@@ -269,16 +230,16 @@
                                             </ul>
                                         </div>
                                         <div class="product__discount__item__text">
-                                            <span>Jus</span>
-                                            <h5><a href="#">Jus buah</a></h5>
-                                            <div class="product__item__price">Rp20.000 <span>Rp25.000</span></div>
+                                            <span>Pakaian</span>
+                                            <h5><a href="#">Kebaya</a></h5>
+                                            <div class="product__item__price">Rp200.000 <span>Rp25.000</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
                                         <div class="product__discount__item__pic set-bg"
-                                            data-setbg="img/product/discount/pd-4.jpg">
+                                            data-setbg="{{ asset('img/product/batik.png') }}">
                                             <div class="product__discount__percent">-20%</div>
                                             <ul class="product__item__pic__hover">
                                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -287,8 +248,8 @@
                                             </ul>
                                         </div>
                                         <div class="product__discount__item__text">
-                                            <span>Buah</span>
-                                            <h5><a href="#">Mangga</a></h5>
+                                            <span>Pakaian</span>
+                                            <h5><a href="#">Batik Wanita</a></h5>
                                             <div class="product__item__price">Rp20.000 <span>Rp25.000</span></div>
                                         </div>
                                     </div>
@@ -305,8 +266,8 @@
                                             </ul>
                                         </div>
                                         <div class="product__discount__item__text">
-                                            <span>Makanan</span>
-                                            <h5><a href="#">Burger</a></h5>
+                                            <span>Sembako</span>
+                                            <h5><a href="#">Gula</a></h5>
                                             <div class="product__item__price">Rp20.000 <span>Rp25.000</span></div>
                                         </div>
                                     </div>
@@ -323,8 +284,8 @@
                                             </ul>
                                         </div>
                                         <div class="product__discount__item__text">
-                                            <span>Buah</span>
-                                            <h5><a href="#">Anggur</a></h5>
+                                            <span>Pakaian</span>
+                                            <h5><a href="#">Kaos</a></h5>
                                             <div class="product__item__price">Rp20.000 <span>Rp25.000</span></div>
                                         </div>
                                     </div>
@@ -358,183 +319,263 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/bedak-2.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/kebaya.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="product/detail">Bedak Bayi</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Kebaya</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/beras-merah.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/rinso.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Beras Merah </a></h6>
-                                    <h5>Rp20.000</h5>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Rinso</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
+                                    <h5>Rp5.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/celana-3.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sabub-cair.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Jeans</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Bedak Bayi</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/dress-2.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/sikat-gigi.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Dress Polos</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Sikat Gigi Kodomo</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/batik.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/molto.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Kemeja Batik Cewek</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Molto</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/daia.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/switsal.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Daia</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Minyak Telon</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/dress.png">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/nivea.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Gaun</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Nivea</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/pondan.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Apel</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Pondan</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-9.jpg">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/minyak-makan.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Kurma</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Minyak Makan</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-10.jpg">
-                                    <ul class="product__item__pic__hover">
+                            <div class="featured__item">
+                                <div class="featured__item__pic set-bg" data-setbg="{{ asset('img/product/kemeja.png') }}">
+                                    <ul class="featured__item__pic__hover">
                                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                         <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Ayam Goreng</a></h6>
+                                <a href="#">
+                                <div class="featured__item__text text-left">
+                                    <h6>Kemeja Pink</h6>
+                                    <div>
+                                        <p style="margin: 0px">
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                        <i class="fa fa-star" style="color: #F0D25A;"></i>
+                                         &nbsp;(220)</p>
+                                    </div>
                                     <h5>Rp20.000</h5>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-11.jpg">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Jus</a></h6>
-                                    <h5>Rp20.000</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-12.jpg">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a href="#">Paket Buah</a></h6>
-                                    <h5>Rp20.000</h5>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

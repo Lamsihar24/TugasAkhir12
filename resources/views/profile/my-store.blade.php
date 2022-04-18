@@ -67,7 +67,7 @@
                     <div class="row sidebar">
                         <div class="col-lg-12">
                             <div class="sidebar-menu">
-                                <a href="{{ route('penjual.my-store') }}" >Toko Saya</a>
+                                <a href="" >Toko Saya</a>
                             </div>
                             <div class="sidebar-menu">
                                 <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
@@ -98,88 +98,95 @@
 
                 </div>
                 <div class="content" style="background: white;margin: 20px 0px;  padding:20px 40px; width:73%;">
-                    <h4 class="">Profile saya</h4>
-                    <p>Kelola informasi profil untuk menjaga keamanan akun.</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class=""><i class="fa fa-file-text-o"></i> Penjualan Saya</h4>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <a href="" style="font-weight: 400; font-size: 18px; line-height: 28px; color: #878787;">Lihat Riwayat penjualan >></a>
+                        </div>
+                    </div>
                     <hr>
-                    <form action="">
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Username :</h5>
-                            </div>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control">
-                            </div>
+                    <div class="row my3">
+                        <div class="status-penjualan text-center">
+                            <img src="{{ asset('img/icon/penjualan/icon1.png') }}" width="50px" height="50px" alt="">
+                            <p>Pesanan</p>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Nama :</h5>
-                            </div>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control">
-                            </div>
+                        <div class="status-penjualan text-center">
+                            <img src="{{ asset('img/icon/penjualan/icon2.png') }}" width="50px" height="50px" alt="">
+                            <p>Dikemas</p>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Gambar :</h5>
-                            </div>
-                            <div class="col-sm-3">
-                                <img src="{{ asset('img/profile.png') }}" alt="">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="file" class="form-control">
-                                <p style="font-size: 12px;">Ukuran gambar: maks: 1 MB <br>Format gambar: .JPEG, .PNG</p>
-                            </div>
+                        <div class="status-penjualan text-center">
+                            <img src="{{ asset('img/icon/penjualan/icon3.png') }}" width="50px" height="50px" alt="">
+                            <p>Dikirim</p>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Email :</h5>
-                            </div>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control">
-                            </div>
+                        <div class="status-penjualan text-center">
+                            <img src="{{ asset('img/icon/penjualan/icon4.png') }}" width="50px" height="50px" alt="">
+                            <p>Pesanan Dibatalkan</p>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Jenis Kelamin :</h5>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                            Laki-laki
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                            <label class="form-check-label" for="exampleRadios2">
-                                                Perempuan
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="status-penjualan text-center">
+                            <img src="{{ asset('img/icon/penjualan/icon5.png') }}" width="50px" height="50px" alt="">
+                            <p>Pengembalian <br>Dana/Barang</p>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
-                                <h5> Tanggal Lahir :</h5>
-                            </div>
-                            <div class="col-sm-9">
-                                <input type="date" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row my-3">
-                            <div class="col-sm-3 text-right">
+                    </div>
 
-                            </div>
-                            <div class="col-sm-9">
-                                <a href="" class="btn btn-primary w-100" >Simpan Perubahan</a>
-                            </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp; Produk Saya</h4>
                         </div>
-                    </form>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp; Tambah Produk Baru</h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-handshake-o"></i>&nbsp;&nbsp; Kelola Lelang</h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-credit-card"></i>&nbsp;&nbsp; Metode Pembayaran</h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-truck"></i>&nbsp;&nbsp;<a href="{{ route('penjual.pengiriman') }}" style="color: black"> Jasa Pengiriman</a></h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-dollar"></i>&nbsp;&nbsp; Saldo Penjualan</h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
+                    <div class="row my-3" style="">
+                        <div class="col-10">
+                            <h4 style="font-size: 21px;"><i class="fa fa-line-chart"></i>&nbsp;&nbsp; Analisis Pembeli</h4>
+                        </div>
+                        <div class="col-2 text-right">
+                            <h4 style="font-size: 21px;">></h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

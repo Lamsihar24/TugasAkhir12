@@ -47,7 +47,7 @@
                         <a href="#" style="text-decoration:none;color:black">Lupa Password</a>
                     </div>
                     <div class="mb-1">
-                        <a href="/dashboard" class="btn btn-success" style="width: 100%">Masuk</a>
+                        <a href="{{ route('dashboard') }}" class="btn btn-success" style="width: 100%">Masuk</a>
                     </div>
                     <div class="">
                     </div>

@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <img src="{{ asset('img/logo2.jpeg') }}" alt="">
-                <h4 class="my-3">Login Penjual</h4>
+                <h4 class="my-3">Login Admin</h4>
             </div>
         </div>
         <div class="row">
@@ -23,8 +23,7 @@
                     <form action="">
                         <input type="email" class="form-control my-4" placeholder="Email/No. Telepon">
                         <input type="password" class="form-control mb-4" placeholder="Password">
-                        <a href="/dashboard" class="btn btn-md w-100 mb-4" style="background-color: #25AF22; color:white">Login</a>
-                        <p class="mb-4">Belum punya akun? <a href="#">Daftar sebagai penjual</a></p>
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-md w-100 mb-4" style="background-color: #25AF22; color:white">Login</a>
                     </form>
                 </div>
             </div>

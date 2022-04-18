@@ -54,9 +54,7 @@
                             <span>(18 Penilaian)</span>
                         </div>
                         <div class="product__details__price">Rp200.000</div>
-                        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                            vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                            quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+                        <p>Bawa masakan rumahan jadi lebih mudah dan praktis. Sayur bening bayam yang tidka ribet karena bahannya sederhana dan cara membuat yang mudah. 1 paket masak terdapat Bayam, Jagung Manis, Kencur dan bawang merah</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -101,45 +99,13 @@
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Deskripsi Produk</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus
-                                        suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
-                                        vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat,
-                                        accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a
-                                        pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula
-                                        elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus
-                                        et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
-                                        vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p>
-                                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed
-                                        porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum
-                                        sed sit amet dui. Proin eget tortor risus.</p>
+                                    <p>Bawa masakan rumahan jadi lebih mudah dan praktis. Sayur bening bayam yang tidka ribet karena bahannya sederhana dan cara membuat yang mudah. 1 paket masak terdapat Bayam, Jagung Manis, Kencur dan bawang merah <br>Bening bayam yang dibuat tanpa tumis menjadi alternatif sayur yang aman untuk vegetarian maupun vegan. Menambahkan perasa juga akan sesuai selera. sehingga jauh lebih aman.</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Informasi Produk</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                        Proin eget tortor risus.</p>
-                                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                    <p>Ikuti insturksi pada kartu resep untuk memudahkan proses memasak. Paket Masak ada baiknya segera diolah, jika ingin disimpan, simpan di lemari es dalam waktu 1 hari paling lama.</p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">

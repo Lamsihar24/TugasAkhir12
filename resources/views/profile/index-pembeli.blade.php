@@ -1,24 +1,6 @@
-@extends('layout.seller')
+@extends('layout.app')
 
 @section('content')
-
-    <!-- Breadcrumb Section Begin -->
-    {{-- <section class="breadcrumb-section set-bg" data-setbg="{{ asset('img/breadcrumb.jpg') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
-                            <span>Contact Us</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Breadcrumb Section End -->
 
     <section class="pencarian">
         <div class="container">
@@ -60,15 +42,12 @@
                     <div class="row text-center">
                         <div class="col-lg-12">
                             <img src="{{ asset('img/profile.png') }}" alt="">
-                            <h4>Seller</h4>
+                            <h4>Lamsihar Sirait</h4>
                             <h5 style="color: #ABA7A7"><i class="fa fa-edit"></i>&nbsp;Ubah Profile</h5>
                         </div>
                     </div>
                     <div class="row sidebar">
                         <div class="col-lg-12">
-                            <div class="sidebar-menu">
-                                <a href="{{ route('penjual.my-store') }}" >Toko Saya</a>
-                            </div>
                             <div class="sidebar-menu">
                                 <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
