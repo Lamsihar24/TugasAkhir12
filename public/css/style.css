@@ -3536,9 +3536,6 @@ ol {
     padding: 20px;
 }
 
-.sidebar{
-    margin-top: 20px;
-}
 .sidebar-menu{
     margin: 25px 25px;
 }
@@ -3628,3 +3625,56 @@ ol {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .product-section .header{
+    margin: 20px 0px;
+    padding: 20px 20px;
+    background-color: white;
+  }
+  .product-category-section .container{
+    background-color: white;
+  }
+
+  .nama-kategori a{
+      font-size: 1.3em;
+      color: #000000;
+  }
+  .product-category-section .category-menu{
+        border: 1px solid #ABA7A7;
+        box-sizing: border-box;
+      padding: 10px 20px;
+  }
+
+  .deskripsi-produk .container{
+    background-color: white;
+  }
+
+.deskripsi-produk .foto-produk{
+    width: 20%;
+}
+
+.deskripsi-produk .foto-produk i{
+    padding: 40px;
+    border: 1px solid #ABA7A7;
+}
+
+.deskripsi-produk .foto-produk i{
+    font-size: 2em;
+    color: #000;
+}
+
+.saldo h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 56px;
+
+    color: #25AF22;
+}
+
+.bank-box{
+    border: 1px solid #a09f9f;
+}
+.bank-box i{
+    color:darkgray;
+}

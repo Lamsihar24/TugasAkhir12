@@ -1,4 +1,4 @@
-@extends('layout.seller')
+@extends('layout.app')
 
 @section('content')
 
@@ -72,7 +72,7 @@
                             <div class="sidebar-menu">
                                 <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ route('penjual.account') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
                                     <a class="dropdown-item" href="#">Pengaturan Akun</a>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                     </div>
                     <div class="row my-3" style="">
                         <div class="col-10">
-                            <h4 style="font-size: 21px;"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp; Tambah Produk Baru</h4>
+                            <h4 style="font-size: 21px;"><i class="fa fa-truck"></i>&nbsp;&nbsp;<a href="{{ route('add-product') }}" style="color: black"> Tambah Produk Baru</a></h4>
                         </div>
                         <div class="col-2 text-right">
                             <h4 style="font-size: 21px;">></h4>
@@ -156,7 +156,7 @@
                     </div>
                     <div class="row my-3" style="">
                         <div class="col-10">
-                            <h4 style="font-size: 21px;"><i class="fa fa-credit-card"></i>&nbsp;&nbsp; Metode Pembayaran</h4>
+                            <h4 style="font-size: 21px;"><i class="fa fa-credit-card"></i>&nbsp;&nbsp;<a href="{{ route('payment.saldo') }}" style="color: black"> Metode Pembayaran</a></h4>
                         </div>
                         <div class="col-2 text-right">
                             <h4 style="font-size: 21px;">></h4>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="row my-3" style="">
                         <div class="col-10">
-                            <h4 style="font-size: 21px;"><i class="fa fa-truck"></i>&nbsp;&nbsp;<a href="{{ route('penjual.pengiriman') }}" style="color: black"> Jasa Pengiriman</a></h4>
+                            <h4 style="font-size: 21px;"><i class="fa fa-truck"></i>&nbsp;&nbsp;<a href="{{ route('shipment') }}" style="color: black"> Jasa Pengiriman</a></h4>
                         </div>
                         <div class="col-2 text-right">
                             <h4 style="font-size: 21px;">></h4>
@@ -173,7 +173,7 @@
                     <br>
                     <div class="row my-3" style="">
                         <div class="col-10">
-                            <h4 style="font-size: 21px;"><i class="fa fa-dollar"></i>&nbsp;&nbsp; Saldo Penjualan</h4>
+                            <h4 style="font-size: 21px;"><i class="fa fa-dollar"></i>&nbsp;&nbsp;Saldo Penjualan</h4>
                         </div>
                         <div class="col-2 text-right">
                             <h4 style="font-size: 21px;">></h4>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="row my-3" style="">
                         <div class="col-10">
-                            <h4 style="font-size: 21px;"><i class="fa fa-line-chart"></i>&nbsp;&nbsp; Analisis Pembeli</h4>
+                            <h4 style="font-size: 21px;"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;<a href="{{ route('store-monitoring') }}" style="color:black"> Analisis Pembeli </a> </h4>
                         </div>
                         <div class="col-2 text-right">
                             <h4 style="font-size: 21px;">></h4>

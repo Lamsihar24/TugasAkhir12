@@ -3,9 +3,12 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PengirimanController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SaleController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,26 +27,57 @@ Route::get('/', function () {
     return redirect('dashboard');
 });
 
-Route::get('login',[AuthController::class,'loginPembeli'])->name('login');
+Route::get('login',[AuthController::class,'index'])->name('login');
+Route::post('login-post',[AuthController::class,'loginPost'])->name('login-post');
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 Route::get('register',[AuthController::class,'registerPembeli'])->name('register');
-Route::get('dashboard',[DashboardController::class,'indexPembeli'])->name('dashboard');
+
+
+Route::group(['middleware'=>'auth'],function(){
+    Route::group(['middleware'=>'authorization:admin,seller,customer'],function(){
+        Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
+    });
+    Route::group(['middleware'=>'authorization:admin'],function(){
+
+    });
+    Route::group(['middleware'=>'authorization:seller'],function(){
+        Route::get('my-store',[StoreController::class,'index'])->name('my-store');
+
+        Route::get('shipment',[PengirimanController::class,'index'])->name('shipment');
+        Route::get('shipment/setting',[PengirimanController::class,'setting'])->name('shipment.setting');
+
+        Route::get('payment/saldo',[PaymentController::class,'index'])->name('payment.saldo');
+        Route::get('payment/setting',[PaymentController::class,'paymentSetting'])->name('payment.setting');
+        Route::get('payment/add-credit-card',[PaymentController::class,'addCreditCard'])->name('payment.add-credit-card');
+
+        Route::get('product/add',[ProductController::class,'addProduct'])->name('add-product');
+        Route::get('product/add-description',[ProductController::class,'addProductDescription'])->name('add-product-description');
+
+        Route::get('sale',[SaleController::class,'index'])->name('sale');
+
+        Route::get('monitoring',[StoreController::class,'monitoring'])->name('store-monitoring');
+
+    });
+    Route::group(['middleware'=>'authorization:seller,customer'],function(){
+        Route::get('profile',[ProfileController::class,'index'])->name('profile');
+
+        Route::get('product',[ProductController::class,'index'])->name('produk');
+        Route::get('product/search',[ProductController::class,'search'])->name('product.search');
+        Route::get('product/detail',[ProductController::class,'view'])->name('produk.detail');
+        Route::get('keranjang',[TransactionController::class,'cart'])->name('keranjang');
+        Route::get('checkout',[TransactionController::class,'checkout'])->name('checkout');
+
+    });
+    Route::group(['middleware'=>'authorization:customer'],function(){
+
+    });
+});
 Route::get('contact',[DashboardController::class,'contact'])->name('contact');
 
-Route::get('product',[ProductController::class,'index'])->name('produk');
-Route::get('product/search',[ProductController::class,'search'])->name('product.search');
-Route::get('product/detail',[ProductController::class,'view'])->name('produk.detail');
-Route::get('keranjang',[TransactionController::class,'cart'])->name('keranjang');
-Route::get('checkout',[TransactionController::class,'checkout'])->name('checkout');
+
 
 // seller
-Route::get('seller/login',[AuthController::class,'loginPenjual'])->name('penjual.login');
-Route::get('seller/register',[AuthController::class,'registerPenjual'])->name('penjual.register');
-Route::get('seller/dashboard',[DashboardController::class,'indexPenjual'])->name('penjual.dashboard');
-Route::get('seller/account',[AccountController::class,'index'])->name('penjual.account');
-Route::get('seller/my-store',[ProfileController::class,'myStore'])->name('penjual.my-store');
-Route::get('seller/pengiriman',[PengirimanController::class,'index'])->name('penjual.pengiriman');
-Route::get('seller/pengaturan-pengiriman',[PengirimanController::class,'setting'])->name('penjual.pengaturan-pengiriman');
+
 
 
 // admin

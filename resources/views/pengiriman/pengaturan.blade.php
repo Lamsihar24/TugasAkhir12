@@ -1,57 +1,6 @@
-@extends('layout.seller')
+@extends('layout.app')
 
 @section('content')
-
-    <!-- Breadcrumb Section Begin -->
-    {{-- <section class="breadcrumb-section set-bg" data-setbg="{{ asset('img/breadcrumb.jpg') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
-                            <span>Contact Us</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Breadcrumb Section End -->
-
-    <section class="pencarian">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    Semua Kategori
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="Apa yang sedang anda cari?">
-                                <a type="submit" class="site-btn">CARI</a>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <a href="">
-                                    <h5>Keranjang Saya</h5>
-                                    <span>17 Barang dalam keranjang</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="pengaturan-pencarian" style="background: #F5F5F5">
         <div class="container">
@@ -63,21 +12,28 @@
                                 <a href="" >Produk Saya</a>
                             </div>
                             <div class="sidebar-menu">
-                                <a href="" >Pesanan</a>
+                                <a href="{{ route('sale') }}" >Pesanan</a>
                             </div>
                             <div class="sidebar-menu">
                                 <a href="" >Kelola Lelang</a>
                             </div>
                             <div class="sidebar-menu">
-                                <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pembayaran</a>
+                                <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Metode Pembayaran</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Jasa Pengiriman</a>
-                                    <a class="dropdown-item" href="#">Pengiriman Saya</a>
-                                    <a class="dropdown-item" href="#">Pengaturan Pengiriman</a>
+                                    <a class="dropdown-item" href="{{ route('payment.saldo') }}">Saldo Penjual </a>
+                                    <a class="dropdown-item" href="{{ route('payment.setting') }}">Pengaturan Rekening</a>
                                 </div>
                             </div>
                             <div class="sidebar-menu">
-                                <a href="">Analisis Pembeli</a>
+                                <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pengiriman</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('shipment') }}">Jasa Pengiriman</a>
+                                    <a class="dropdown-item" href="{{ route('shipment') }}">Pengiriman Saya</a>
+                                    <a class="dropdown-item" href="{{ route('shipment.setting') }}">Pengaturan Pengiriman</a>
+                                </div>
+                            </div>
+                            <div class="sidebar-menu">
+                                <a href="{{ route('store-monitoring') }}">Analisis Pembeli</a>
                             </div>
                             <div class="sidebar-menu">
                                 <a href="" >Komunitas</a>

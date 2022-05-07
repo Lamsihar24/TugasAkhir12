@@ -8,7 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HKBP Store</title>
-
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(".chartContainer").CanvasJSChart({
+            title: {
+                text: "Monthly Rainfall in Columbus - 1996"
+            },
+            axisY: {
+                title: "Rainfall in mm",
+                includeZero: false
+            },
+            axisX: {
+                interval: 1
+            },
+            data: [
+            {
+                type: "line", //try changing to column, area
+                toolTipContent: "{label}: {y} mm",
+                dataPoints: [
+                    { label: "Jan",  y: 5.28 },
+                    { label: "Feb",  y: 3.83 },
+                    { label: "March",y: 6.55 },
+                    { label: "April",y: 4.81 },
+                    { label: "May",  y: 2.37 },
+                    { label: "June", y: 2.33 },
+                    { label: "July", y: 3.06 },
+                    { label: "Aug",  y: 2.94 },
+                    { label: "Sep",  y: 5.41 },
+                    { label: "Oct",  y: 2.17 },
+                    { label: "Nov",  y: 2.17 },
+                    { label: "Dec",  y: 2.80 }
+                ]
+            }
+            ]
+        });
+    });
+    </script>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
@@ -21,6 +58,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css'); }}" type="text/css">
     <link rel="stylesheet" href="{{ URL::asset('css/slicknav.min.css'); }}" type="text/css">
     <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}" type="text/css">
+
 </head>
 
 <body>
@@ -53,7 +91,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Lamsihar Sirait</a>
+                <a href="{{ route('profile') }}"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -117,7 +155,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Lamsihar Sirait</a>
+                                <a href="{{ route('profile') }}"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +203,9 @@
         </div>
     </header>
     <!-- Header Section End -->
-    @yield('content')
+    <main  style="" class="">
+        @yield('content')
+    </main>
     <!-- Footer Section Begin -->
     <footer class="footer spad">
         <div class="container">
@@ -228,8 +268,8 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Js Plugins -->
+
     <script src="{{ URL::asset('js/jquery-3.3.1.min.js'); }}"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js'); }}"></script>
     <script src="{{ URL::asset('js/jquery.nice-select.min.js'); }}"></script>
@@ -238,6 +278,9 @@
     <script src="{{ URL::asset('js/mixitup.min.js'); }}"></script>
     <script src="{{ URL::asset('js/owl.carousel.min.js'); }}"></script>
     <script src="{{ URL::asset('js/main.js'); }}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 

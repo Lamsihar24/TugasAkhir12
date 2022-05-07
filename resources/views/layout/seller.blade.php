@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="{{ route('penjual.account') }}"><i class="fa fa-user"></i> Seller</a>
+                <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Seller</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -117,7 +117,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="{{ route('penjual.account') }}"><i class="fa fa-user"></i> Seller</a>
+                                <a href="{{ route('profile') }}"><i class="fa fa-user"></i> Seller</a>
                             </div>
                         </div>
                     </div>

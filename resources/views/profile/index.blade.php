@@ -1,24 +1,6 @@
-@extends('layout.seller')
+@extends('layout.app')
 
 @section('content')
-
-    <!-- Breadcrumb Section Begin -->
-    {{-- <section class="breadcrumb-section set-bg" data-setbg="{{ asset('img/breadcrumb.jpg') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
-                            <span>Contact Us</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Breadcrumb Section End -->
 
     <section class="pencarian">
         <div class="container">
@@ -66,14 +48,16 @@
                     </div>
                     <div class="row sidebar">
                         <div class="col-lg-12">
-                            <div class="sidebar-menu">
-                                <a href="{{ route('penjual.my-store') }}" >Toko Saya</a>
-                            </div>
+                            @if (auth()->user()->role=='seller')
+                                <div class="sidebar-menu">
+                                    <a href="{{ route('my-store') }}" >Toko Saya</a>
+                                </div>
+                            @endif
                             <div class="sidebar-menu">
                                 <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ route('penjual.account') }}">Profile</a>
-                                    <a class="dropdown-item" href="#">Pengaturan Akun</a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">Pengaturan Akun</a>
                                 </div>
                             </div>
                             <div class="sidebar-menu">

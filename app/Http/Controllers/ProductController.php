@@ -17,4 +17,13 @@ class ProductController extends Controller
     public function search(){
         return view('product.search');
     }
+
+
+    public function addProduct(){
+        return view('product.add_product');
+    }
+
+    public function addProductDescription(){
+        return view('product.add_product_description');
+    }
 }

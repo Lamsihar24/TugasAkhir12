@@ -26,7 +26,8 @@
                 <div class="mx-auto my-4" style="width: 80%; height:80%; background-image: url('/img/welcome.png'); background-repeat: no-repeat; background-position: center;"></div>
             </div>
             <div class="col-md-6 px-5">
-                <form action="">
+                <form action="{{ route('login-post') }}" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-6">
                             <h4>Masuk</h4>
@@ -36,18 +37,18 @@
                         </div>
                     </div>
                     <div class="my-2">
-                        <label for="exampleInputEmail1" class="form-label">Email / No.Telepon</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail" class="form-label">Email / No.Telepon</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="my-2">
-                        <label for="exampleInputEmail1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="my-2 text-end">
                         <a href="#" style="text-decoration:none;color:black">Lupa Password</a>
                     </div>
                     <div class="mb-1">
-                        <a href="{{ route('dashboard') }}" class="btn btn-success" style="width: 100%">Masuk</a>
+                        <button type="submit" class="btn btn-success" style="width: 100%">Masuk</a>
                     </div>
                     <div class="">
                     </div>
