@@ -13,4 +13,12 @@ class TransactionController extends Controller
     public function checkout(){
         return view('transaction.checkout');
     }
+
+    public function cart2(){
+        return view('transaction.shopping-chart-2');
+    }
+
+    public function checkout2(){
+        return view('transaction.checkout-minyak-goreng');
+    }
 }

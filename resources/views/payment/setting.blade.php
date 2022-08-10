@@ -6,20 +6,28 @@
         <div class="container">
             <div class="row my-3">
                 <div class="col-md-12">
-                    <p class="mb-0 mt-3">Toko Saya  >  Metode Pembayaran  > Pengaturan Rekening</p>
+                    <p class="mb-0 mt-3">Profile > Toko Saya  >  Metode Pembayaran  > Pengaturan Rekening</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-3 px-2">
+                <div class="col-3 px-2 h-100">
                     <div class="sidebar bg-white py-3">
                         <div class="sidebar-menu ">
-                            <a href="" >Produk Saya</a>
+                            <a href="{{ route('my-product') }}" >Produk Saya</a>
                         </div>
                         <div class="sidebar-menu">
-                            <a href="{{ route('sale') }}" >Pesanan</a>
+                            <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pesanan</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('order') }}">Pesanan </a>
+                                <a class="dropdown-item" href="{{ route('order.cancelled') }}">Pembatalan</a>
+                            </div>
                         </div>
                         <div class="sidebar-menu">
-                            <a href="" >Kelola Lelang</a>
+                            <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kelola Lelang</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('auction.add') }}">Buat Lelang </a>
+                                <a class="dropdown-item" href="{{ route('auction') }}">Riwayat Lelang</a>
+                            </div>
                         </div>
                         <div class="sidebar-menu">
                             <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Metode Pembayaran</a>
@@ -42,7 +50,7 @@
                     </div>
                 </div>
                 <div class="col-9 px-2">
-                    <div class="content bg-white p-3">
+                    <div class="content bg-white p-4">
                         <div class="row">
                             <div class="col-sm-6">
                                 <h4 class=""><i></i> Pengaturan Rekening</h4>

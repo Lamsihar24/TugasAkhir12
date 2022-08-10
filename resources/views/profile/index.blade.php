@@ -1,67 +1,40 @@
 @extends('layout.app')
 
 @section('content')
-
-    <section class="pencarian">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    Semua Kategori
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="Apa yang sedang anda cari?">
-                                <a type="submit" class="site-btn">CARI</a>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <a href="">
-                                    <h5>Keranjang Saya</h5>
-                                    <span>17 Barang dalam keranjang</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="profil-section" style="background: #F5F5F5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3" style="background: white;margin: 20px 0px; padding:10px;">
                     <div class="row text-center">
                         <div class="col-lg-12">
-                            <img src="{{ asset('img/profile.png') }}" alt="">
-                            <h4>Seller</h4>
-                            <h5 style="color: #ABA7A7"><i class="fa fa-edit"></i>&nbsp;Ubah Profile</h5>
+                            <img src="{{ asset('img/avatar.png') }}" width="200px" height="200px" alt="">
+                            <h4>{{$user->username }}</h4>
+                            <a href=""><h5 style="color: #ABA7A7"><i class="fa fa-edit"></i>&nbsp;Ubah Profile</h5></a>
                         </div>
                     </div>
                     <div class="row sidebar">
                         <div class="col-lg-12">
-                            @if (auth()->user()->role=='seller')
-                                <div class="sidebar-menu">
-                                    <a href="{{ route('my-store') }}" >Toko Saya</a>
-                                </div>
-                            @endif
+
                             <div class="sidebar-menu">
                                 <a href="" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun Saya</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('profile') }}">Pengaturan Akun</a>
+                                    <a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('user.account-setting') }}">Pengaturan Akun</a>
+                                    @if (auth()->user()->role_id==2)
+                                    <a class="dropdown-item" href="{{ route('user.seller-registration') }}">Daftar Sebagai Penjual</a>
+                                    @endif
                                 </div>
                             </div>
+                            @if (auth()->user()->is_registered_as_seller)
+                                <div class="sidebar-menu">
+                                    <a href="{{ route('store') }}" >Toko Saya</a>
+                                </div>
+                            @endif
                             <div class="sidebar-menu">
-                                <a href="" >Pesanan Saya</a>
+                                <a href="{{ route('order') }}" >Pesanan Saya</a>
+                            </div>
+                            <div class="sidebar-menu">
+                                <a href="{{ route('lelang') }}" >Lelang</a>
                             </div>
                             <div class="sidebar-menu">
                                 <a href="" >Favorit</a>
@@ -91,7 +64,7 @@
                                 <h5> Username :</h5>
                             </div>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control">
+                            <h5>{{ $user->username }}</h5>
                             </div>
                         </div>
                         <div class="row my-3">
@@ -107,7 +80,7 @@
                                 <h5> Gambar :</h5>
                             </div>
                             <div class="col-sm-3">
-                                <img src="{{ asset('img/profile.png') }}" alt="">
+                                <img src="{{ asset($user->foto_profil) }}" alt="">
                             </div>
                             <div class="col-sm-6">
                                 <input type="file" class="form-control">
@@ -119,7 +92,7 @@
                                 <h5> Email :</h5>
                             </div>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control">
+                                <h5>{{ $user->email }}</h5>
                             </div>
                         </div>
                         <div class="row my-3">
@@ -130,7 +103,7 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" @if ($user->jenis_kelamin == 'Laki-laki') checked @endif>
                                             <label class="form-check-label" for="exampleRadios1">
                                             Laki-laki
                                             </label>
@@ -138,7 +111,7 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" @if ($user->jenis_kelamin == 'Perempuan ') checked @endif>
                                             <label class="form-check-label" for="exampleRadios2">
                                                 Perempuan
                                             </label>
@@ -157,7 +130,6 @@
                         </div>
                         <div class="row my-3">
                             <div class="col-sm-3 text-right">
-
                             </div>
                             <div class="col-sm-9">
                                 <a href="" class="btn btn-primary w-100" >Simpan Perubahan</a>

@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <img src="{{ asset('img/logo2.jpeg') }}" alt="">
-                <h4 class="my-3">Registrasi Penjual</h4>
+                <h4 class="my-3">Registrasi Toko</h4>
             </div>
         </div>
         <div class="row">
@@ -29,6 +29,10 @@
                         <div class="input-group">
                             <input type="text" class="form-control mb-4" placeholder="Nama Toko">
                         </div>
+                        <label for="store-name" class="form-label">NIK</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control mb-4" placeholder="NIK">
+                        </div>
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
                             <input type="email" class="form-control mb-4" placeholder="Email">
@@ -41,8 +45,8 @@
                         <div class="input-group">
                             <input type="password" class="form-control mb-4" placeholder="Konfirmasi password">
                         </div>
-                        <a href="/seller/dashboard" class="btn btn-md w-100 mb-4" style="background-color: #25AF22; color:white">Register</a>
-                        <p class="mb-4">Belum punya akun? <a href="#">Daftar sebagai penjual</a></p>
+                        <a href="{{ route('login')}}" class="btn btn-md w-100 mb-4" style="background-color: #25AF22; color:white">Register</a>
+                        {{-- <p class="mb-4">Sudah punya akun? <a href="#">Daftar sebagai penjual</a></p> --}}
                     </form>
                 </div>
             </div>

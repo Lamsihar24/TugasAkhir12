@@ -29,8 +29,9 @@
                         <div class="sidebar__item">
                             <h4>Kategori</h4>
                             <ul>
-                                <li><a href="#">Daging Segar</a></li>
-                                <li><a href="#">Bahan Pokok</a></li>
+                                <li><a href="{{ route('product.search.bahan-pokok') }}">Bahan Pokok</a></li>
+                                <li><a href="{{ route('product.search.pakaian') }}">Pakaian</a></li>
+                                <li><a href="{{ route('product.search.detergen') }}">Kebersihan Rumah</a></li>
                                 <li><a href="#">Buah-buahan</a></li>
                                 <li><a href="#">Pakaian</a></li>
                                 <li><a href="#">Ulos</a></li>

@@ -1,68 +1,52 @@
 @extends('layout.app')
 
 @section('content')
-    <!-- Breadcrumb Section Begin -->
-    {{-- <section class="breadcrumb-section set-bg" data-setbg="{{ URL::asset('img/breadcrumb.jpg'); }} ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Vegetable’s Package</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./index.html">Home</a>
-                            <a href="./index.html">Vegetables</a>
-                            <span>Vegetable’s Package</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Breadcrumb Section End -->
-
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-5 col-md-5">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large"
-                                src="{{ URL::asset('img/product/details/product-details-1.jpg'); }}" alt="">
+                            <img class="product__details__pic__item--large" src="{{ asset($product->gambar_produk) }}" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                                src="{{ URL::asset('img/product/details/thumb-1.jpg'); }}" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                                src="{{ URL::asset('img/product/details/thumb-2.jpg'); }}" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                                src="{{ URL::asset('img/product/details/thumb-3.jpg'); }}" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                                src="{{ URL::asset('img/product/details/thumb-4.jpg'); }}" alt="">
+                            @foreach ($galery as $gambar)
+                                <img data-imgbigurl="{{ asset($gambar->file_location) }}" src="{{ asset($gambar->file_location) }}" alt="">
+                            @endforeach
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-7 col-md-7">
                     <div class="product__details__text">
-                        <h3>Paket Buah dan Sayur</h3>
+                        <h4>{{ $product->nama_produk }}</h4>
                         <div class="product__details__rating">
+                            <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half-o"></i>
-                            <span>(18 Penilaian)</span>
+                            <span style="color: rgb(70, 69, 69)">(18 Penilaian)</span>
                         </div>
-                        <div class="product__details__price">Rp200.000</div>
-                        <p>Bawa masakan rumahan jadi lebih mudah dan praktis. Sayur bening bayam yang tidka ribet karena bahannya sederhana dan cara membuat yang mudah. 1 paket masak terdapat Bayam, Jagung Manis, Kencur dan bawang merah</p>
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
+                        <div class="product__details__price"><span style="font-size: 0.8em">Rp</span>{{ number_format($product->harga_produk,0,"",".") }}</div>
+                        <div>
+                            <?php echo limit_text($product->deskripsi_produk,100) ?>
+                            <br><br>
+                            <a href="" style="color:black;font-weight:700; color:rgb(78, 78, 78)">Lebih banyak</a>
+                        </div>
+                        <form action="{{ route('addToCart') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="produk_id" value="{{ $product->id }}">
+                            <div class="product__details__quantity">
+                                <div class="quantity">
+                                    <div class="pro-qty">
+                                        <input name="jumlah_produk" type="text" value="1">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <a href="{{ route('keranjang') }}" class="primary-btn">Tambahkan Ke Keranjang</a>
+                            <button type="submit" class="primary-btn"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</button>
+                        </form>
                         {{-- <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> --}}
                         <ul>
                             <li><b>Stok</b> <span>Tersedia</span></li>
@@ -88,7 +72,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">Informasi</a>
+                                    aria-selected="false">Spesifikasi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
@@ -99,29 +83,207 @@
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
                                     <h6>Deskripsi Produk</h6>
-                                    <p>Bawa masakan rumahan jadi lebih mudah dan praktis. Sayur bening bayam yang tidka ribet karena bahannya sederhana dan cara membuat yang mudah. 1 paket masak terdapat Bayam, Jagung Manis, Kencur dan bawang merah <br>Bening bayam yang dibuat tanpa tumis menjadi alternatif sayur yang aman untuk vegetarian maupun vegan. Menambahkan perasa juga akan sesuai selera. sehingga jauh lebih aman.</p>
+                                    <div>
+                                        <?php echo $product->deskripsi_produk ?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Informasi Produk</h6>
-                                    <p>Ikuti insturksi pada kartu resep untuk memudahkan proses memasak. Paket Masak ada baiknya segera diolah, jika ingin disimpan, simpan di lemari es dalam waktu 1 hari paling lama.</p>
+                                    <h6>Spesifikasi Produk</h6>
+                                    <p> <?php echo limit_text($product->deskripsi_produk,50) ?></p>
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-3" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Penilaian</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                        Proin eget tortor risus.</p>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <h5>Penilaian pembeli</h5>
+                                            <hr>
+                                            <div class="product__details__rating">
+                                                <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
+                                                <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                <i class="fa fa-star-half-o" style="color: #ffc400;"></i>
+                                                <span style="color: rgb(70, 69, 69)"> 4.5 dari 5</span>
+                                            </div>
+                                            <span>23 Total penilaian</span>
+                                            <table>
+                                                <tr>
+                                                    <td style="width: 25%; font-size:0.9em">Bintang 5</td>
+                                                    <td style="width: 70%;">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 5%;"> 75%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 25%; font-size:0.9em">Bintang 4</td>
+                                                    <td style="width: 70%;">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 5%;"> 10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 25%; font-size:0.9em">Bintang 3</td>
+                                                    <td style="width: 70%;">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 5%;"> 3%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 25%; font-size:0.9em">Bintang 2</td>
+                                                    <td style="width: 70%;">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 5%;"> 10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 25%; font-size:0.9em">Bintang 1</td>
+                                                    <td style="width: 70%;">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 2%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 5%;"> 2%</td>
+                                                </tr>
+                                            </table>
+                                            <div>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <h5>Foto dari pembeli</h5>
+                                            <div class="row">
+                                                @foreach ($galery as $gambar)
+                                                    <div class="col-2 p-2">
+                                                        <div style="height: 140px; background-image: url({{ asset($gambar->file_location) }});background-size:cover;"></div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 text-center">
+                                                    <a href="">Lihat gambar lainnya</a>
+                                                </div>
+                                            </div>
+                                            <hr>
+
+                                            <div class="row my-5">
+                                                <div class="col-9"><h5>Penilaian teratas dari pembeli</h5></div>
+                                                <div class="col-3 text-right">
+                                                    <select name="" id=""   >
+                                                        <option value="">Semua</option>
+                                                        <option value="">Positif</option>
+                                                        <option value="">Negatif</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="review">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="{{ asset('img/icon/profile.png') }}" alt="" height="40px" width="40px"><span> Pangihutan</span>
+                                                                <p style="font-size: 13px;"><i class="fa fa-calendar"></i>{{ now()->format('d M Y') }}</p>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <div class="product__details__rating">
+                                                                    <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star-half-o" style="color: #ffc400;"></i>
+                                                                    <span style="color: rgb(70, 69, 69)"> Warna Black</span>
+                                                                </div>
+                                                                <p>Kualitas produk sangat baik</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="review">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="{{ asset('img/icon/profile.png') }}" alt="" height="40px" width="40px"><span> Masturi Pangaribuan</span>
+                                                                <p style="font-size: 13px;"><i class="fa fa-calendar"></i>{{ now()->format('d M Y') }}</p>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <div class="product__details__rating">
+                                                                    <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star-half-o" style="color: #ffc400;"></i>
+                                                                    <span style="color: rgb(70, 69, 69)"> Warna Hitam</span>
+                                                                </div>
+                                                                <p>Produk sesuai gambar, pengiriman cepat</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="review">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="{{ asset('img/icon/profile.png') }}" alt="" height="40px" width="40px"><span> Dante Lubis </span>
+                                                                <p style="font-size: 13px;"><i class="fa fa-calendar"></i>{{ now()->format('d M Y') }}</p>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <div class="product__details__rating">
+                                                                    <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star-half-o" style="color: #ffc400;"></i>
+                                                                    <span style="color: rgb(70, 69, 69)"> Warna Hitam</span>
+                                                                </div>
+                                                                <p>Produk sesuai gambar, pengiriman cepat</p>
+                                                                <img src="{{ asset('img/product/batik.png') }}" alt="" height="80px" width="60px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="review">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="{{ asset('img/icon/profile.png') }}" alt="" height="40px" width="40px"><span> Pandapotan</span>
+                                                                <p style="font-size: 13px;"><i class="fa fa-calendar"></i>{{ now()->format('d M Y') }}</p>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <div class="product__details__rating">
+                                                                    <span style="color: rgb(70, 69, 69)">{{ $product->rating }}</span>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star" style="color: #ffc400;"></i>
+                                                                    <i class="fa fa-star-half-o" style="color: #ffc400;"></i>
+                                                                    <span style="color: rgb(70, 69, 69)"> Warna Hitam</span>
+                                                                </div>
+                                                                <p>Produk sesuai gambar, pengiriman cepat</p>
+                                                                <img src="{{ asset('img/product/batik.png') }}" alt="" height="80px" width="60px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +295,7 @@
     <!-- Product Details Section End -->
 
     <!-- Related Product Section Begin -->
-    <section class="related-product">
+    {{-- <section class="related-product">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -205,6 +367,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Related Product Section End -->
 @endsection
