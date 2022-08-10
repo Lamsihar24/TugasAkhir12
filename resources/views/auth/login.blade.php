@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="background-image: url({{ asset('img/bg/bg.jpg') }}); background-size: 100px 120px">
             <hr>
             <div class="col-sm-2">
 

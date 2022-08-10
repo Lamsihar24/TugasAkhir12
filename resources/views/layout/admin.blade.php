@@ -1,101 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<title>HKBPStore Admin</title>
-		<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-		<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
-		<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-	</head>
-	<body class="sb-nav-fixed">
-		<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-			<!-- Navbar Brand-->
-			<a class="navbar-brand ps-3" href="index.html">HKBPStore Admin</a>
-			<!-- Sidebar Toggle-->
-			<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
-				<i class="fas fa-bars"></i>
-			</button>
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Cari" aria-label="Search for..." aria-describedby="btnNavbarSearch">
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg><!-- <i class="fas fa-search"></i> Font Awesome fontawesome.com --></button>
-                </div>
-            </form>
-			<!-- Navbar-->
-			<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-				<li class="nav-item dropdown">
 
-					<a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="fas fa-user fa-fw"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-						<li>
-							<a class="dropdown-item" href="#!">Settings</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#!">Activity Log</a>
-						</li>
-						<li>
-							<hr class="dropdown-divider" />
-						</li>
-						<li>
-							<a class="dropdown-item" href="#!">Logout</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-		<div id="layoutSidenav">
-			<div id="layoutSidenav_nav">
-				<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-					<div class="sb-sidenav-menu">
-						<div class="nav">
-							<div class="sb-sidenav-menu-heading">Menu</div>
-							<a class="nav-link" href="{{ route('admin.dashboard') }}">
-								<div class="sb-nav-link-icon">
-									<i class="fas fa-tachometer-alt"></i>
-								</div> Dashboard
-							</a>
-                            <a class="nav-link" href="{{ route('admin.request-penjual') }}">
-								<div class="sb-nav-link-icon">
-									<i class="fas fa-user-alt"></i>
-								</div> Request Penjual
-							</a>
-                            <a class="nav-link" href="#">
-								<div class="sb-nav-link-icon">
-									<i class="fas fa-phone-alt"></i>
-								</div> Pusat Bantuan
-							</a>
-						</div>
-					</div>
-				</nav>
-			</div>
-			<div id="layoutSidenav_content">
-				<main>
-                    @yield('content')
-				</main>
-				<footer class="py-4 bg-light mt-auto">
-					<div class="container-fluid px-4">
-						<div class="d-flex align-items-center justify-content-between small">
-							<div class="text-muted">Copyright &copy; Your Website 2022</div>
-							<div>
-								<a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp; Conditions</a>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-		<script src="{{ asset('js/scripts.js') }}"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-		<script src="{{ asset('assets/demo/chart-area-demo.js') }}"></script>
-		<script src="{{ asset('assets/demo/chart-bar-demo.js') }}"></script>
-		<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-		<script src="{{ asset('js/datatables-simple-demo.js') }}"></script>
-	</body>
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Admin-HKBPStore</title>
+
+    <meta name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/boxicons.css') }}" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="{{ asset('assets/js/config.js') }}"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ route('dashboard') }}" class="app-brand-link">
+                <img src="{{ asset('img/logo.png') }}" alt="" width="100%">
+            </a>
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item">
+              <a href="{{ route('dashboard') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Dashboard</div>
+              </a>
+            </li>
+
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Menu</span>
+            </li>
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                  <div data-i18n="Account Settings">Pengguna</div>
+                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="{{ route('manage-user') }}" class="menu-link">
+                      <div data-i18n="Account">Akun</div>
+                    </a>
+                  </li>
+                </ul>
+            </li>
+            <!-- Cards -->
+            <li class="menu-item">
+              <a href="{{ route('user.membership') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-store"></i>
+                <div data-i18n="Basic">Pendaftaran Toko</div>
+              </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ route('manage-ads') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-news"></i>
+                  <div data-i18n="Basic">Kelola Iklan</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ route('manageLelang') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-store-alt"></i>
+                  <div data-i18n="Basic">Kelola Lelang</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ route('manage-bazar') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-store-alt"></i>
+                  <div data-i18n="Basic">Kelola Bazar</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="{{ route('manage-faq') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-support"></i>
+                  <div data-i18n="Basic">Pusat Bantuan</div>
+                </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                    Selamat Datang, Admin &nbsp; <strong>Ressort HKBP Sigumpar </strong>
+                </div>
+              </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="{{ asset('img/avatar.png') }}" alt class="w-px-40 h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="img/avatar.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-semibold d-block">{{ auth()->user()->username }}</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle">Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-cog me-2"></i>
+                        <span class="align-middle">Pengaturan</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{{ route('logout') }}">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Keluar</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+            <div class="content-wrapper">
+                @yield('content')
+                <!-- Footer -->
+                <footer class="content-footer footer bg-footer-theme">
+                    <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                    <div class="mb-2 mb-md-0">
+                        ©
+                        <script>
+                        document.write(new Date().getFullYear());
+                        </script>
+                        <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">Kelompok 12 TA 2</a>
+                    </div>
+                    </div>
+                </footer>
+                <!-- / Footer -->
+
+                <div class="content-backdrop fade"></div>
+            </div>
+          <!-- Content wrapper -->
+
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+
+    <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
+
+    <!-- Main JS -->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <!-- Page JS -->
+    <script src="{{ asset('assets/js/dashboards-analytics.js') }}"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 </html>

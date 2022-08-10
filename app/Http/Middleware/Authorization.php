@@ -22,8 +22,7 @@ class Authorization
         }
         $allowed_roles = array_slice(func_get_args(), 2);
 
-
-        if(in_array(Auth::user()->role, $allowed_roles)){
+        if(in_array(Auth::user()->role_id, $allowed_roles)){
             return $next($request);
         }
 

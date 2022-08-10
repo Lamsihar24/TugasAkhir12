@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class StoreController extends Controller
 {
     public function index(){
-        return view('profile.my-store');
+        return view('store.index');
     }
 
     public function monitoring(){
-        return view('monitoring.index');
+        return view('store.monitoring');
     }
 }

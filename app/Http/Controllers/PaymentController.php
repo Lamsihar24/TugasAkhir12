@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class PaymentController extends Controller
 {
     public function index(){
-        return view('payment.index');
+        return view('store.payment.index');
     }
 
     public function paymentSetting(){
-        return view('payment.setting');
+        return view('store.payment.setting');
     }
 
     public function addCreditCard(){
-        return view('payment.add_credit_card');
+        return view('store.payment.add_credit_card');
     }
 }
